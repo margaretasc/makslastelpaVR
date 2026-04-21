@@ -15,6 +15,7 @@
 
       <a-assets>
         <a-asset-item id="mt" material="side: double" src="objekti\mtm.glb"></a-asset-item>
+        <a-asset-item id="navmesh-glb" src="objekti\mesh.glb"></a-asset-item>
       </a-assets>
 
       <!--biblioteka-->
@@ -24,7 +25,7 @@
 
       <!--navmesh-->
       
-      <a-plane id="floor" rotation="-90 0 0" position="0 0 0" width="10" height="10" navmesh></a-plane>
+      <a-gltf-model id="navmesh" src="#navmesh-glb" position="-0.08482 1.635 -44.07577" navmesh="" gltf-model="objekti\mesh.glb"></a-gltf-model>
 
       <!-- light -->
 
@@ -34,11 +35,19 @@
       <a-light type="directional" light="type: point; castShadow: true" position="0.71764 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="11.05013 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="ambient" light="type: point; castShadow: true" position="15.88126 2.71555 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-11.4467 2.1441 -26.13256" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-11.4467 2.89852 -27.08106" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-8.76268 4.55491 -29.77787" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-9.60982 0.98037 -36.9264" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-9.60982 1.61848 -45.76047" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="4.92765 3.12106 -27.08106" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+
+
 
       <!--kustiba-->
 
       <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-6.67504 1.63265 0.01453" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
-        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh:#floor;fall:0.5;height:1.65;">
+        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh:#navmesh;fall:0.5;height:1.65;">
         </a-entity>
       </a-entity>
 
