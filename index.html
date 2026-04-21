@@ -6,42 +6,42 @@
   </head>
   <body>
     
-    <!-- ATMOSFERA -->
+    <!--apkartne-->
 
-   
       <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
       <a-sky color="#29282c " material="color: #29282c"></a-sky>
 
-      
-
-      <!-- BIRZA-->
+      <!--makslas telpa-->
 
       <a-assets>
         <a-asset-item id="mt" material="side: double" src="objekti\mtm.glb"></a-asset-item>
       </a-assets>
 
-      <!-- BIBLIOTEKA -->
+      <!--biblioteka-->
 
       <a-gltf-model src="#mt" gltf-model="objekti\MTTM.glb" position="0 1.68 0"></a-gltf-model> 
       <a-gltf-model src="#mt" gltf-model="objekti\animacija_412.glb" animation-mixer position="0 1.68 0"></a-gltf-model> 
 
+      <!--navmesh-->
+      
+      <a-plane id="floor" rotation="-90 0 0" position="0 0 0" width="10" height="10" navmesh></a-plane>
 
       <!-- light -->
 
-    
-      
-
-      
       <a-light type="directional" light="type: point; castShadow: true" position="-9.97149 1.79463 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-2.82295 1.79463 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
-      <!-- KUSTIBA-->
+      <a-light type="directional" light="type: point; castShadow: true" position="-9.97149 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="0.71764 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="11.05013 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="type: point; castShadow: true" position="15.88126 2.71555 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
 
-      <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-1.01492 1.63265 -10.56491" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
-        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh:#floor;fall:0.5;height:1.65;" rotation="-13.292620847035092 -119.17522138721088 0">
+      <!--kustiba-->
+
+      <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-6.67504 1.63265 0.01453" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
+        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh:#floor;fall:0.5;height:1.65;">
         </a-entity>
       </a-entity>
 
-    
     </a-scene>
   </body>
 </html>
