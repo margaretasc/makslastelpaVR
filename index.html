@@ -9,7 +9,7 @@
     <!--apkartne-->
 
       <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
-      <a-sky color="#29282c " material="color: #29282c"></a-sky>
+      <a-sky color="#29282c " material="color: #1c1c1c"></a-sky>
 
       <!--makslas telpa-->
 
@@ -20,12 +20,16 @@
 
       <!--biblioteka-->
 
-      <a-gltf-model src="#mt" gltf-model="objekti\MTTM.glb" position="0 1.68 0"></a-gltf-model> 
-      <a-gltf-model src="#mt" gltf-model="objekti\animacija_412.glb" animation-mixer position="0 1.68 0"></a-gltf-model> 
+      <a-gltf-model src="#mt" gltf-model="objekti\MMTTMT.glb" position="0 1.68 0"></a-gltf-model> 
+
+      <a-gltf-model src="#mt" gltf-model="objekti\MMTTMT_zemee.glb" position="0 1.68 0"></a-gltf-model>
+      
+      <a-gltf-model src="#mt" gltf-model="objekti\MMTTMTsiena.glb" animation-mixer="" position="-40.47684 1.76 0" loop="false"
+      start event="animation-start" click="animation play" ></a-gltf-model>
 
       <!--navmesh-->
-      
-      <a-gltf-model id="navmesh" src="#navmesh-glb" position="0 1.58 -44.08" navmesh="" gltf-model="objekti\mesh.glb" visibility="false"></a-gltf-model>
+    
+      <a-gltf-model id="navmesh" src="#navmesh-glb" position="0 1.58 -44.08" navmesh="" gltf-model="objekti\mesh.glb" visible="false"></a-gltf-model>
 
       <!-- light -->
 
@@ -38,7 +42,15 @@
       <a-light type="directional" light="type: point; castShadow: true" position="-43.22071 3.51982 -25.18252" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-46.78489 3.02323 -23.73179" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-26.12428 3.02323 -22.24566" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
-
+      <a-light type="ambient" light="intensity: 0.53; type: point; castShadow: true" position="17.64312 2.71555 -14.70377" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="intensity: 0.53; type: point; castShadow: true" position="17.64312 2.71555 -5.22313" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="intensity: 0.53; type: point; castShadow: true" position="-11.61112 3.10186 -7.50605" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="intensity: 0.53; type: point; castShadow: true" position="-11.61112 3.10186 -7.50605" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="intensity: 0.53; type: point; castShadow: true" position="-11.61112 3.10186 -7.50605" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="ambient" light="intensity: 2.51; type: point; castShadow: true" position="22.03137 1.16263 -10.39965" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="intensity: 4.5; type: point; castShadow: true" position="-42.11848 6.12829 -24.37954" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-18.83852 1.99301 -21.94998" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
+      <a-light type="directional" light="type: point; castShadow: true" position="-18.83852 1.99301 -20.62636" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-9.97149 1.79463 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-2.82295 1.79463 2.16235" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
       <a-light type="directional" light="type: point; castShadow: true" position="-9.97149 2.98914 3.01123" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
@@ -55,11 +67,11 @@
 
       <!--kustiba-->
 
-      <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-6.67504 1.5 0.01453" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
-        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh:#navmesh;fall:0.5;height:1.65;">
+      <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-6.04763 0.01 3.00713" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
+        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh: #navmesh; height: 1.10" position="2.037826675625702 1.272443270595411 2.1884047237203976" rotation="-0.3437746770784651 182.88812820575822 0">
         </a-entity>
       </a-entity>
-
+      
     </a-scene>
   </body>
 </html>S
